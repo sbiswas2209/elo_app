@@ -12,7 +12,7 @@ import {
   Container,
 } from "@mui/material";
 
-const API_BASE_URL = "http://localhost:8000/api/recommend";
+const API_BASE_URL = "https://eloapp-production.up.railway.app/api/recommend";
 
 const HomePage = () => {
   const [actresses, setActresses] = useState([]);

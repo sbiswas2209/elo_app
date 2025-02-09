@@ -15,7 +15,8 @@ import {
 } from "@mui/material";
 import { ArrowUpward, ArrowDownward, Remove } from "@mui/icons-material";
 
-const API_URL = "http://localhost:8000/api/recommend/leaderboard"; // Replace with your FastAPI URL
+const API_URL =
+  "https://eloapp-production.up.railway.app/api/recommend/leaderboard"; // Replace with your FastAPI URL
 
 const Leaderboard = () => {
   const [leaderboard, setLeaderboard] = useState([]);
