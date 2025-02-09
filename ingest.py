@@ -1,7 +1,7 @@
 import json
 from utils.database import insert_document, delete_all
 
-# delete_all("actresses")
+delete_all("actresses")
 
 with open('data.json') as f:
     d = json.load(f)
