@@ -3,11 +3,12 @@ import redis
 from typing import List, Optional, Tuple, Dict
 from bson import ObjectId
 from utils.database import db, get_collection
+from utils.constants import redis_uri, redis_password
 
 db = get_collection("actresses")
 
 # Redis client
-redis_client = redis.Redis(host="redis-12318.c301.ap-south-1-1.ec2.redns.redis-cloud.com", port=12318, db=0, decode_responses=True, password="xBTLVHPWPP9ZFBQ5w41boRqPsjMn3RGg")  # Ensures responses are strings
+redis_client = redis.Redis(host=redis_uri, port=12318, db=0, decode_responses=True, password=redis_password)
 
 def serialize_document(doc: Dict) -> Dict:
     """Convert MongoDB document to a serializable format"""

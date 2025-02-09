@@ -1,8 +1,9 @@
 from pymongo import MongoClient
 from bson import ObjectId
+from utils.constants import mongo_uri
 
 # MongoDB Configuration
-MONGO_URI = "mongodb+srv://developer:kFSu2Tk8FIZIyLoA@cluster0.bbsvi.mongodb.net/"
+MONGO_URI = mongo_uri
 DATABASE_NAME = "sample"
 
 # Initialize MongoDB Client
