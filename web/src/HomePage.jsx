@@ -61,7 +61,7 @@ const HomePage = () => {
         winner_id: winnerId,
         loser_id: loserId,
       });
-      fetchActresses(winnerId, loserId);
+      await fetchActresses(winnerId, loserId);
     } catch (error) {
       console.log(error);
       setError("Failed to submit choice");
@@ -71,8 +71,6 @@ const HomePage = () => {
   };
 
   if (isLoading) return <CircularProgress />;
-  if (error) return <Typography color="error">{error}</Typography>;
-  if (actresses.length === 0) return;
 
   return (
     <Container>
